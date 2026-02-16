@@ -5,6 +5,8 @@
     --headings-font-weight: 700;
     --main-bg-color: #FFFFFF;
     --main-text-color: #000000;
+    --main--text-weight: 400;
+    --header-font-weight: 700;
     --button-text-color: #FFFFFF;
     --like-main-body-color: none;
     --like-contour-color: var(--main-text-color, #000000);
