@@ -1,1 +1,12 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main-font-family: "Inter", sans-serif;
+    --accent-font-family: "PressStart2P", sans-serif;
+    --main-font-weight: 400;
+    --headings-font-weight: 700;
+    --main-bg-color: #FFFFFF;
+    --main-text-color: #000000;
+    --button-text-color: #FFFFFF;
+    --like-main-body-color: none;
+    --like-contour-color: var(--main-text-color, #000000);
+    --like-sparks-color: #ff0000;
+}
