@@ -15,11 +15,13 @@
   min-block-size: 100dvb;
   max-width: 700px;
   justify-self: center;
+  background-color: var(--main-bg-color, #ffffff);
   background-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
   repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
   linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-  font-variation-settings: "wght" var(--main--text-weight, 400);
+  font-variation-settings: "wght" var(--main-font-weight, 410);
   font-family: var(--main-font-family, sans-serif);
+  background-attachment: fixed;
 }
 
 .header {
@@ -30,7 +32,6 @@
   background-color: #FFFFFF;
   border: solid #000000 2px;
   font-family: var(--accent-font-family, "PressStart2P");
-  min-block-size: 327px;
   margin-block-start: 100px;
   padding-top: 130px;
   padding-bottom: 130px;
@@ -43,23 +44,24 @@
 
 .header__description {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
 }
 
 .main {
   background-size: cover;
   margin-block-start: 100px;
-  background-color: var(--main-bg-color, #ffffff);
 }
 
 .main__card {
   border: solid 2px #000000;
   margin-block-end: 50px;
+  background-color: var(--main-bg-color, #ffffff);
 }
 
 .card__header {
   padding: 4px 10px;
   font-size: 18px;
-  font-variation-settings: "wght" var(--header-font-weight, 700);
+  font-variation-settings: "wght" var(--headings-font-weight, 715);
 }
 
 .card__image_section {
@@ -82,7 +84,7 @@
 
 .card__image {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
 }
@@ -125,7 +127,7 @@
   font-family: var(--main-font-family, sans-serif);
 }
 
-.second_paragraph {
+.personal_paragraph {
   padding-top: 25px;
   font-size: 18px;
   font-family: var(--main-font-family, sans-serif);
@@ -133,6 +135,7 @@
 
 .card__buttons {
   display: flex;
+  gap: 6px;
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 25px;
@@ -148,8 +151,8 @@
   border: 2px solid transparent;
   padding: 0;
   background-color: transparent;
-  inline-size: 45px;
-  block-size: 45px;
+  inline-size: 38px;
+  block-size: 38px; 
   z-index: 1;
   appearance: none;
   cursor: pointer;
@@ -170,6 +173,7 @@
   inline-size: 335px;
   block-size: 55px;
   font-size: 14px;
+  background-color: var(--main-bg-color, #ffffff);
 }
 
 .floppy__icon {
@@ -192,10 +196,12 @@
 }
 
 .core {
+  fill: transparent;
   transition: fill 0.3s linear 0.03s;
 }
 
 .main-body {
+  fill: transparent;
   transition: fill 0.3s linear;
 }
 .sparks {
@@ -257,7 +263,7 @@
 .button {
   position: relative;
   border: solid 2px #000;
-  background-color: transparent;
+  background-color: var(--main-bg-color, #ffffff);
   font-family: var(--accent-font-family, "PressStart2P");
   cursor: pointer;
   transition: box-shadow 0.3s ease;
@@ -292,6 +298,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 100px;
 }
 
 .modal[open] {
@@ -299,6 +306,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  inline-size: 353px;
+  block-size: 191px;
   gap: 30px;
   font-family: var(--accent-font-family, "PressStart2P");
 }
@@ -306,17 +315,21 @@
 .modal__content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 12px
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
 }
 
 .modal__message {
   width:min-content;
+  font-size: 14px;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 150%;
 }
 
 .modal__button {
-  padding: 12.5px 116.5px;
+  padding: 10.5px 132.5px;
 }
 
 .modal::backdrop {
@@ -332,7 +345,7 @@
   
   .footer__buttons {
   display: flex;
-  padding: 50px 34.5px 100px 34.5px;
+  padding: 0 34.5px 100px 34.5px;
   }
 
   .floppy__icon {
@@ -347,7 +360,11 @@
   gap: 8px;
   inline-size: 306px;
   block-size: 85px;
-  padding: 7px 20px;
+  padding: 13px 20px;
+  }
+
+  .save__button .button__text {
+    text-wrap-mode: nowrap;
   }
 
 }
