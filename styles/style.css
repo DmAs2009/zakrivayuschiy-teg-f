@@ -318,6 +318,7 @@
   justify-content: flex-start;
   gap: 20px;
   width: 100%;
+  padding-left: 6px;
 }
 
 .modal__message {
@@ -351,6 +352,10 @@
   .floppy__icon {
   inline-size: 28px;
   block-size: 28px;
+  }
+
+  .modal__content {
+  padding-left: 0;
   }
 
   .save__button {
