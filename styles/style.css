@@ -122,6 +122,9 @@
 }
 
 .card__description_section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   padding: 25px;
   font-size: 18px;
   font-family: var(--main-font-family, sans-serif);
@@ -169,7 +172,6 @@
 
 .save__button {
   padding: 0;
-  align-items: center;
   inline-size: 335px;
   block-size: 55px;
   font-size: 14px;
@@ -245,6 +247,7 @@
 
 .like-icon.is-liked .heart {
   animation: heart 0.3s ease-in 0.1s 1 alternate;
+  transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {
@@ -303,11 +306,10 @@
 
 .modal[open] {
   display: flex;
+  padding: 30px 25px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  inline-size: 353px;
-  block-size: 191px;
   gap: 30px;
   font-family: var(--accent-font-family, "PressStart2P");
 }
@@ -331,6 +333,7 @@
 
 .modal__button {
   padding: 10.5px 132.5px;
+  text-transform: uppercase;
 }
 
 .modal::backdrop {
