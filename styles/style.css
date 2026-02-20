@@ -130,12 +130,6 @@
   font-family: var(--main-font-family, sans-serif);
 }
 
-.personal_paragraph {
-  padding-top: 25px;
-  font-size: 18px;
-  font-family: var(--main-font-family, sans-serif);
-}
-
 .card__buttons {
   display: flex;
   gap: 6px;
@@ -171,6 +165,10 @@
 }
 
 .save__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 0;
   inline-size: 335px;
   block-size: 55px;
